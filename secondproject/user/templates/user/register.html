@@ -1,0 +1,15 @@
+{%extends 'blog/base.html'%}
+{%load crispy_forms_tags %}
+{%block content%}
+<div class="jumbotron">
+  <form method="post">
+    {%csrf_token%}
+    {{form|crispy}}
+
+  <input type="submit" name="" value="Singup">
+
+  </form>
+
+</div>
+
+{%endblock%}

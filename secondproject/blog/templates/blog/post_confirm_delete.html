@@ -1,0 +1,13 @@
+{%extends 'blog/base.html'%}
+{%block content%}
+<form method="post">
+  {%csrf_token%}
+  <p>Are you sure you want to delete {{object.title}} ?</p>
+
+
+  <!-- <input type="submit" name="" value="Yes"> -->
+  <button type="submit" class="btn btn-outline-primary">Yes</button>
+  <a href="{%url 'post-detail' post.id %}"><button type="button" class="btn btn-outline-secondary">No</button></a>
+
+</form>
+{%endblock%}

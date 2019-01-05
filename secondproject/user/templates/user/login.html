@@ -1,0 +1,16 @@
+{%extends 'blog/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+<div class="jumbotron">
+  <form method="post">
+    {%csrf_token%}
+    {{form|crispy}}
+    <input type="submit" name="" value="Login">
+  </form>
+  <br>
+  <a href="{%url 'password_reset'%}">Forgot Password?</a></small>
+  <br>
+  <small class='text-muted'>Need an account?  </h3><a href="{%url 'user-register'%}">Sign Up</a></small>
+
+</div>
+{%endblock%}
